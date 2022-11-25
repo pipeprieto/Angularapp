@@ -1,1 +1,7 @@
-<p>task-list works!</p>
+<div>
+    <div *ngFor="let task of tasks">
+        <app-task [data]="task"></app-task>
+        <button (click)="editTask()">Editar</button>
+        <button>Eliminar</button>
+    </div>
+</div>
