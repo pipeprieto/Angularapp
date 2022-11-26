@@ -12,15 +12,19 @@ export class TaskListComponent implements OnInit {
   constructor(private service:TaskListService, private router:Router) { }
 
   ngOnInit(): void {
-     this.tasks = [{title:'task 1',description:'kasdbasbdkaskjd'},{title:'task 2', description:'sbdhasjdashdba'}]
+     this.tasks = [{id:1,title:'task 1',description:'kasdbasbdkaskjd'},{id:2,title:'task 2', description:'sbdhasjdashdba'}]
   }
 
-  editTask(){
-    this.router.navigate(['/taskForm']);
+  editTask(id:any){
+    this.router.navigate([`/taskForm/:${id}`]);
   }
 
-  deleteTask(){
+  deleteTask(id:Number){
+    this.tasks = this.tasks.filter((task:any) => task.id !== id);
+  }
 
+  addTask(){
+    
   }
 
 }

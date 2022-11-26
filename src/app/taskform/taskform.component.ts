@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input } from '@angular/core';
 import {FormBuilder,FormGroup, Validators} from '@angular/forms';
 
 @Component({
@@ -7,7 +7,7 @@ import {FormBuilder,FormGroup, Validators} from '@angular/forms';
   styleUrls: ['./taskform.component.css']
 })
 export class TaskformComponent implements OnInit {
-
+  @Input() data!:any;
   constructor() { }
 
   ngOnInit(): void {

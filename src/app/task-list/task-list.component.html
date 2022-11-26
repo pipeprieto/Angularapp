@@ -1,7 +1,8 @@
 <div>
     <div *ngFor="let task of tasks">
         <app-task [data]="task"></app-task>
-        <button (click)="editTask()">Editar</button>
-        <button>Eliminar</button>
+        <button (click)="editTask(task.id)">Editar</button>
+        <button (click)="deleteTask(task.id)">Eliminar</button>
     </div>
+    <div><button (click)="addTask()">Añadir</button></div>
 </div>
